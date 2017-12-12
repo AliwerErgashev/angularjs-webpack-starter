@@ -7,6 +7,10 @@ module.exports = function ($urlRouterProvider, $stateProvider) {
       url: '/',
       template: '<app></app>'
     })
+    .state('app.login', {
+      url: 'login',
+      template: '<login-page></login-page>'
+    })
     .state('app.home', {
       url: 'home',
       template: '<app-home></app-home>'

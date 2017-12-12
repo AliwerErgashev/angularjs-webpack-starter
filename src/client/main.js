@@ -6,7 +6,11 @@ angular
 
   .module('app', ['ui.bootstrap', 'ui.router'])
 
+  .run(require('./run'))
+
   .config(require('./states.js'))
+
+  .service('authService', require('./services/auth.service'))
 
   .component('app', {
     template: require('./components/app/app.component.html'),
@@ -24,5 +28,9 @@ angular
     template: require('./components/about/about.component.html'),
     controller: require('./components/about/about.component')
   })
+  .component('loginPage', {
+    template: require('./components/login-page/login-page.component.html'),
+    controller: require('./components/login-page/login-page.component')
+  })
 
-;
+  ;

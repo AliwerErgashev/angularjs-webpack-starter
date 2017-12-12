@@ -1,8 +1,11 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+
 const app = express();
 const { api } = require('./api');
 
 app.use(express.static('public'));
+app.use(bodyParser.json());
 
 app.use('/api', api);
 
