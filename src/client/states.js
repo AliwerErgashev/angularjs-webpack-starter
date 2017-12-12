@@ -19,5 +19,9 @@ module.exports = function ($urlRouterProvider, $stateProvider) {
       url: 'about',
       template: '<app-about></app-about>'
     })
+    .state('app.my_files', {
+      url: 'my-files',
+      template: '<my-files-page></my-files-page>'
+    })
     ;
 };

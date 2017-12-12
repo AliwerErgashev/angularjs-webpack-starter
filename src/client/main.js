@@ -12,6 +12,8 @@ angular
 
   .service('authService', require('./services/auth.service'))
 
+  .directive('fileModel', require('./directives/file-model.directive'))
+
   .component('app', {
     template: require('./components/app/app.component.html'),
     controller: require('./components/app/app.component')
@@ -31,6 +33,10 @@ angular
   .component('loginPage', {
     template: require('./components/login-page/login-page.component.html'),
     controller: require('./components/login-page/login-page.component')
+  })
+  .component('myFilesPage', {
+    template: require('./components/my-files-page/my-files-page.component.html'),
+    controller: require('./components/my-files-page/my-files-page.component')
   })
 
   ;
