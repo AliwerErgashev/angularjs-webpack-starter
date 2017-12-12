@@ -5,7 +5,6 @@ module.exports = ($window, $http, authService) => {
     $http.get('api/auth-tokens', { params: { authTokenId } }).then(response => {
       authService.authTokenId = authTokenId;
       authService.username = response.data.username;
-    }, console.error);
+    }, error => console.error(error));
   }
-  console.log('running', authTokenId);
 };

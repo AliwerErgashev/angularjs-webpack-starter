@@ -18,8 +18,7 @@ class LoginPageComponent {
     }).then(response => {
       this.authService.persistToken(response.data.id);
       this.authService.username = _username;
-    }, console.error);
-    console.log(this.username, this.password);
+    }, error => console.error(error));
   }
 
   get username() {

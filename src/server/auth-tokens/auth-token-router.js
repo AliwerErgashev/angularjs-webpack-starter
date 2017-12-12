@@ -11,15 +11,12 @@ const authTokenRouterFactory = (authTokenDao) => {
       res.status(403).send({ message: 'Incorrect username or password' })
     }
     const [authToken] = await authTokenDao.insert(user.id);
-    console.log(authToken);
     res.send(authToken);
   })
 
   router.get('/', async (req, res) => {
     const { authTokenId } = req.query;
-    console.log(authTokenId);
     const [userInfo] = await authTokenDao.getUserInfo(Number(authTokenId));
-    console.log(userInfo);
     res.send(userInfo);
   })
 

@@ -17,7 +17,6 @@ class AuthTokenDao extends BaseDao {
   }
 
   async getUserInfo(authTokenId) {
-    console.log(typeof authTokenId);
     const result = await this.pool.query(`select u.username from users u join auth_tokens a on a.user_id = u.id where a.id = $1`, [authTokenId]);
     return result.rows;
   }
