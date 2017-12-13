@@ -1,5 +1,5 @@
 const { BaseDao } = require('../base-dao')
-const { pool } = require('./pool')
+const { pool } = require('../pool')
 
 class FileDao extends BaseDao {
   constructor(pool) {

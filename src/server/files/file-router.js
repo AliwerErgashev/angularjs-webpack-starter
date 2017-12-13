@@ -18,7 +18,19 @@ const fileRouterFactory = fileDao => {
   })
 
   router.post('/', upload.single('file'), async (req, res) => {
-    res.end()
+    const { file } = req
+    try {
+      const [result] = await fileDao.insert({
+        name: file.originalname,
+        type: file.mimetype,
+        size: file.size,
+        content: file.buffer
+      }, { returning: ['id'] })
+      res.send(result)
+    } catch (error) {
+      console.error('error', error)
+      res.status(500).send({ details: error.details })
+    }
   })
 
   return router

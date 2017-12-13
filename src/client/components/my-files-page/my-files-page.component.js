@@ -1,11 +1,20 @@
+const angular = require('angular')
+
 class MyFilesComponent {
   /* @ngInject */
-  constructor($scope) {
+  constructor($http, $scope) {
+    this.$http = $http
     this.$scope = $scope
   }
 
-  $onInit() {
-    this.$scope.$watch(() => this.files, files => console.info(files))
+  saveFile() {
+    const [file] = this.files
+    const formData = new FormData()
+    formData.append('file', file)
+    this.$http.post('api/files', formData, {
+      transformRequest: angular.identity,
+      headers: { 'Content-Type': undefined }
+    }).then(console.info, console.error)
   }
 }
 

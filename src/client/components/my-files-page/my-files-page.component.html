@@ -1,1 +1,7 @@
-<input type="file" file-model="$ctrl.files">
+<form ng-submit="$ctrl.saveFile()">
+  <div class="form-group">
+    <label class="control-label">File</label>
+    <input class="form-control" type="file" file-model="$ctrl.files">
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
