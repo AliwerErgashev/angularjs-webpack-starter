@@ -34,5 +34,13 @@ module.exports = {
         ]
       }
     ]
+  },
+  devServer: {
+    contentBase: 'public',
+    open: true,
+    port: 9001,
+    proxy: {
+      '/api': 'http://localhost:9000'
+    }
   }
 }
