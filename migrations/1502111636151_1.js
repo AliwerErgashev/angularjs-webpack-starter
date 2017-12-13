@@ -1,11 +1,15 @@
-exports.up = (pgm) => {
-  return pgm.createTable('users', {
-    id: 'id',
-    username: 'text',
-    password: 'text'
-  });
+exports.up = pgm => {
+  pgm.sql(`
+    CREATE TABLE "users" (
+      "id" serial PRIMARY KEY,
+      "username" text,
+      "password" text
+    )
+  `);
 };
 
-exports.down = (pgm) => {
-  return pgm.dropTable('users');
+exports.down = pgm => {
+  pgm.sql(`
+    DROP TABLE "users"
+  `);
 };

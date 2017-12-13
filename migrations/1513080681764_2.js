@@ -1,10 +1,14 @@
-exports.up = (pgm) => {
-  return pgm.createTable('auth_tokens', {
-    id: 'id',
-    user_id: 'integer'
-  });
+exports.up = pgm => {
+  pgm.sql(`
+    CREATE TABLE "authTokens" (
+      "id" serial PRIMARY KEY,
+      "userId" integer
+    )
+  `);
 };
 
-exports.down = (pgm) => {
-  return pgm.dropTable('auth_tokens');
+exports.down = pgm => {
+  pgm.sql(`
+    DROP TABLE "authTokens"
+  `);
 };
