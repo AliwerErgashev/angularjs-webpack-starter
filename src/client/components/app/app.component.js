@@ -4,4 +4,4 @@ class AppComponent {
   }
 }
 
-module.exports = AppComponent;
+module.exports = AppComponent

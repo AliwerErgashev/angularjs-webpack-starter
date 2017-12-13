@@ -4,4 +4,4 @@ class AboutComponent {
   }
 }
 
-module.exports = AboutComponent;
+module.exports = AboutComponent

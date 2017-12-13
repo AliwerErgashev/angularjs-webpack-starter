@@ -1,6 +1,6 @@
 /*@ngInject*/
 module.exports = function ($urlRouterProvider, $stateProvider) {
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/')
 
   $stateProvider
     .state('app', {
@@ -23,5 +23,5 @@ module.exports = function ($urlRouterProvider, $stateProvider) {
       url: 'my-files',
       template: '<my-files-page></my-files-page>'
     })
-    ;
-};
+    
+}

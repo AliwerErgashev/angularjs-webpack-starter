@@ -4,4 +4,4 @@ class HomeComponent {
   }
 }
 
-module.exports = HomeComponent;
+module.exports = HomeComponent

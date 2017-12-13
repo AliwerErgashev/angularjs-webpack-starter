@@ -1,6 +1,6 @@
-const angular = require('angular');
-require('angular-ui-bootstrap');
-require('@uirouter/angularjs');
+const angular = require('angular')
+require('angular-ui-bootstrap')
+require('@uirouter/angularjs')
 
 angular
 
@@ -39,4 +39,4 @@ angular
     controller: require('./components/my-files-page/my-files-page.component')
   })
 
-  ;
+  

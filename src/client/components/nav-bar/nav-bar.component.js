@@ -4,4 +4,4 @@ class NavbarComponent {
   }
 }
 
-module.exports = NavbarComponent;
+module.exports = NavbarComponent

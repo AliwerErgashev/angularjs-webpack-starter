@@ -1,29 +1,29 @@
 class LoginPageComponent {
   /*@ngInject*/
   constructor($http, authService) {
-    this.$http = $http;
-    this.authService = authService;
+    this.$http = $http
+    this.authService = authService
   }
 
   $onInit() {
-    this._username = 'user1';
-    this._password = 'pass1';
+    this._username = 'user1'
+    this._password = 'pass1'
   }
 
   processLogin() {
-    const { _username, _password } = this;
+    const { _username, _password } = this
     this.$http.post('api/auth-tokens', {
       username: _username,
       password: _password
     }).then(response => {
-      this.authService.persistToken(response.data.id);
-      this.authService.username = _username;
-    }, error => console.error(error));
+      this.authService.persistToken(response.data.id)
+      this.authService.username = _username
+    }, error => console.error(error))
   }
 
   get username() {
-    return this.authService.username;
+    return this.authService.username
   }
 }
 
-module.exports = LoginPageComponent;
+module.exports = LoginPageComponent
