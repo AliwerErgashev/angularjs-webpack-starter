@@ -6,7 +6,7 @@
   "scripts": {
     "webpack": "webpack -d -w",
     "nodemon": "nodemon --watch 'src/server/**/*.js' .",
-    "start": "concurrently \"npm run webpack\" \"npm run nodemon\""
+    "start": "concurrently --raw \"npm run webpack\" \"npm run nodemon\""
   },
   "dependencies": {
     "@uirouter/angularjs": "~1.0.0",
