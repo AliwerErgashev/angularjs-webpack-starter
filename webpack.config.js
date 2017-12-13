@@ -1,13 +1,11 @@
-const path = require('path');
-
 module.exports = {
   entry: [
     './src/client/main.css',
     './src/client/main.js'
   ],
   output: {
-    path: path.join(__dirname, 'public'),
-    filename: path.join('assets', 'bundle.js')
+    path: `${__dirname}/public`,
+    filename: 'assets/bundle.js'
   },
   module: {
     rules: [
@@ -37,4 +35,4 @@ module.exports = {
       }
     ]
   }
-};
+}
