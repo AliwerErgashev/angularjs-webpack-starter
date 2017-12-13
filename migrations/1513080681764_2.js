@@ -4,11 +4,11 @@ exports.up = pgm => {
       "id" serial PRIMARY KEY,
       "userId" integer
     )
-  `);
-};
+  `)
+}
 
 exports.down = pgm => {
   pgm.sql(`
     DROP TABLE "authTokens"
-  `);
-};
+  `)
+}

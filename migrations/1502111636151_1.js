@@ -5,11 +5,11 @@ exports.up = pgm => {
       "username" text,
       "password" text
     )
-  `);
-};
+  `)
+}
 
 exports.down = pgm => {
   pgm.sql(`
     DROP TABLE "users"
-  `);
-};
+  `)
+}
